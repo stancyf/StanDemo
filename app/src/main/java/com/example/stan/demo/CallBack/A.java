@@ -8,11 +8,11 @@ public class A {
 
     private CallBack mCallBack;
 
-    public void onAttach(CallBack callBack){
+    public void onAttach(CallBack callBack) {
         this.mCallBack = callBack;
     }
 
-    public void change(String str){
+    public void change(String str) {
         mCallBack.callback(str);
     }
 }
