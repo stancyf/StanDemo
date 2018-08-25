@@ -1,6 +1,6 @@
 # StanDemo
 [Author:]  
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspStan  
+	Stan  
 [Description:]  
        个人测试Demo合集    
 [List:]  
