@@ -1,9 +1,9 @@
 # StanDemo
-##[Author:]  
+## [Author:]  
        Stan  
-##Description:]  
+## Description:]  
        个人测试Demo合集    
-##[List:]  
+## [List:]  
        1.回调机制  
        2.观察者模式  
        3.MVP框架  
