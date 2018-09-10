@@ -9,7 +9,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * Created by Stan on 2018/8/26.
  */
 
-public class Producer implements Runnable{
+public class Producer implements Runnable {
     private volatile boolean isRunning = true;
     private BlockingQueue<PCData> queue;//内存缓冲区
     private static AtomicInteger count = new AtomicInteger();//原子操作 总数
@@ -29,12 +29,12 @@ public class Producer implements Runnable{
         PCData data = null;
         Random random = new Random();
         System.out.println("start producting id: " + Thread.currentThread().getId());
-        while(isRunning){
+        while (isRunning) {
             try {
                 Thread.sleep(random.nextInt(SLEEPTIME));//线程休眠几秒否则数据量太大
                 data = new PCData(count.incrementAndGet());
                 System.out.println(data + "加入队列");
-                if(!queue.offer(data, 2, TimeUnit.SECONDS)){
+                if (!queue.offer(data, 2, TimeUnit.SECONDS)) {
                     System.out.println("加入队列失败");
                 }
             } catch (InterruptedException e) {
@@ -43,7 +43,8 @@ public class Producer implements Runnable{
             }
         }
     }
-    public void stop(){
+
+    public void stop() {
         isRunning = false;
     }
 }
