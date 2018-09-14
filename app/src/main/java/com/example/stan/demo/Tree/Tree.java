@@ -2,6 +2,7 @@ package com.example.stan.demo.Tree;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
@@ -165,5 +166,24 @@ public class Tree {
         }
         return list;
     }
-
+    //深度优先
+    public List<TreeNode> depthOrderTraverse(TreeNode root) {
+        if (root == null) {
+            return null;
+        }
+        LinkedList<TreeNode> stack = new LinkedList<>();
+        List<TreeNode> list = new ArrayList<>();
+        stack.push(root);
+        while (!stack.isEmpty()) {
+            TreeNode node = stack.pop();
+            list.add(node);
+            if (node.right != null) {
+                stack.push(node.right);
+            }
+            if (node.left != null) {
+                stack.push(node.left);
+            }
+        }
+        return list;
+    }
 }
