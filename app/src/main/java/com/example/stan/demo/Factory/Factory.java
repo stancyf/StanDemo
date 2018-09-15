@@ -5,18 +5,20 @@ package com.example.stan.demo.Factory;
  */
 
 public class Factory {
-    public Factory(){}
-    public Shape getShape(String str){
-        if(str == null){
+    public Factory() {
+    }
+
+    public Shape getShape(String str) {
+        if (str == null) {
             return null;
         }
-        if(str.equalsIgnoreCase("Square")){
+        if (str.equalsIgnoreCase("Square")) {
             return new Square();
         }
-        if(str.equalsIgnoreCase("Circle")){
+        if (str.equalsIgnoreCase("Circle")) {
             return new Circle();
         }
-        if(str.equalsIgnoreCase("Tranangle")){
+        if (str.equalsIgnoreCase("Tranangle")) {
             return new Tranangle();
         }
         return null;

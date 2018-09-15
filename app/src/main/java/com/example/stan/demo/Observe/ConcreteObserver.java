@@ -5,7 +5,7 @@ package com.example.stan.demo.Observe;
  * Created by Stan on 2018/8/12.
  */
 
-public class ConcreteObserver extends Observer{
+public class ConcreteObserver extends Observer {
 
     public ConcreteObserver(int i) {
         super(i);

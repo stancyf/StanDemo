@@ -25,10 +25,10 @@ public class TransmitFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if(context != null){
+        if (context != null) {
             mCallBack = (CallBack) getActivity();
             Log.i(TAG, "onAttach: attach success");
-        }else {
+        } else {
             throw new IllegalArgumentException();
         }
     }

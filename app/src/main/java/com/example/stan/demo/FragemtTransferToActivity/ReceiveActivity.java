@@ -16,7 +16,7 @@ import com.example.stan.demo.R;
  * Created by Stan on 2018/8/12.
  */
 
-public class ReceiveActivity extends AppCompatActivity implements CallBack{
+public class ReceiveActivity extends AppCompatActivity implements CallBack {
 
     private static final String TAG = "ReceiveActivity";
 
@@ -27,10 +27,9 @@ public class ReceiveActivity extends AppCompatActivity implements CallBack{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //此处的fragment要引入v4包下面的fragmemt
-        mButton = (Button) findViewById(R.id.activity);
-        final TransmitFragment transmitFragment = new TransmitFragment();
+        TransmitFragment transmitFragment = new TransmitFragment();
         FragmentManager fragmentManager = getSupportFragmentManager();
-        final FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.fragment, transmitFragment);
         fragmentTransaction.commit();
     }
@@ -42,6 +41,6 @@ public class ReceiveActivity extends AppCompatActivity implements CallBack{
 
     @Override
     public void getdate(String str) {
-        Toast.makeText(this, str,Toast.LENGTH_LONG).show();
+        Toast.makeText(this, str, Toast.LENGTH_LONG).show();
     }
 }
